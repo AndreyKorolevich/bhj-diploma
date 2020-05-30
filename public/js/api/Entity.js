@@ -4,7 +4,7 @@
  * */
 class Entity {
  constructor () {
-   this.URL = ''
+   this.url = ''
  }
   /**
    * Запрашивает с сервера список данных.
@@ -13,11 +13,12 @@ class Entity {
    * */
   static list( data, callback = f => f ) {
     let options = {};
+    options.url = this.url;
     options.data = data;
     options.callback = callback();
     options.method = 'GET';
     options.responseType = 'json';
-    createRequest(options);
+    return createRequest(options);
   }
 
   /**
@@ -27,6 +28,7 @@ class Entity {
    * */
   static create( data, callback = f => f ) {
     let options = {};
+    options.url = this.url;
     options.data = {
      ...data,
       _method: 'PUT'
@@ -34,7 +36,7 @@ class Entity {
     options.callback = callback();
     options.method = 'PUT';
     options.responseType = 'json';
-    createRequest(options);
+    return createRequest(options);
   }
 
   /**
@@ -43,11 +45,12 @@ class Entity {
    * */
   static get( id = '', data, callback = f => f ) {
     let options = {};
+    options.url = this.url;
     options.data = data;
     options.callback = callback();
     options.method = 'GET';
     options.responseType = 'json';
-    createRequest(options);
+    return createRequest(options);
   }
 
   /**
@@ -56,6 +59,7 @@ class Entity {
    * */
   static remove( id = '', data, callback = f => f ) {
     let options = {};
+    options.url = this.url;
     options.data = {
       ...data,
       _method: 'DELETE',
@@ -64,7 +68,7 @@ class Entity {
     options.callback = callback();
     options.method = 'GET';
     options.responseType = 'json';
-    createRequest(options);
+    return createRequest(options);
   }
 }
 
