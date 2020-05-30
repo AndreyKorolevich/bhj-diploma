@@ -4,7 +4,7 @@
  * */
 const createRequest = (options = {}) => {
     let request = new XMLHttpRequest();
-    request.responseType = `${options.responseType}`;
+    request.responseType = options.responseType;
     for (let key in options.headers) {
         request.setRequestHeader(`${key}`, `${options.headers[key]}`)
     }
