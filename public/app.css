@@ -14,6 +14,10 @@
   display: none;
 }
 
+.modal-block{
+  display: block;
+}
+
 .app_user-logged .user-panel,
 .app_user-logged .transactions-panel,
 .app_user-logged .accounts-panel,

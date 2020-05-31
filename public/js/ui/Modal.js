@@ -13,7 +13,11 @@ class Modal {
    * необходимо выкинуть ошибку.
    * */
   constructor( element ) {
-
+    if(!element) {
+      throw new UserException('Element is not defined');
+    }
+    this.element = element;
+    this.registerEvents();
   }
 
   /**
@@ -22,7 +26,8 @@ class Modal {
    * (с помощью метода Modal.onClose)
    * */
   registerEvents() {
-
+    this.buttons = this.element.querySelectorAll('[data-dismiss="modal"]');
+    this.buttons .forEach(e => e.addEventListener('click',this.onClose));
   }
 
   /**
@@ -30,25 +35,25 @@ class Modal {
    * Закрывает текущее окно (Modal.close())
    * */
   onClose( e ) {
-
+      e.close();
   }
   /**
    * Удаляет обработчики событий
    * */
   unregisterEvents() {
-
+    this.buttons .forEach(e => e.removeEventListener('click',this.onClose));
   }
   /**
    * Открывает окно: устанавливает CSS-свойство display
    * со значением «block»
    * */
   open() {
-
+    this.element.classList.add('modal-block');
   }
   /**
    * Закрывает окно: удаляет CSS-свойство display
    * */
   close(){
-
+    this.element.classList.remove('modal-block');
   }
 }
