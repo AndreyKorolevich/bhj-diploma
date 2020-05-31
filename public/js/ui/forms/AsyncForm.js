@@ -13,6 +13,11 @@ class AsyncForm {
    * через registerEvents()
    * */
   constructor( element ) {
+    if (!element) {
+      throw new UserException('Element is not defined');
+    }
+    this.element = element;
+    this.registerEvents();
 
   }
 
@@ -21,7 +26,10 @@ class AsyncForm {
    * вызывает метод submit()
    * */
   registerEvents() {
-
+    this.element.addEventListener('submit',event => {
+      event.preventAbort();
+      this.submit();
+    })
   }
 
   /**
@@ -32,7 +40,12 @@ class AsyncForm {
    * }
    * */
   getData() {
-
+    let result = {};
+    const inputs = this.element.querySelectorAll('input');
+    inputs.forEach(elem => {
+      result[elem.name] = elem.value;
+    });
+    return result
   }
 
   onSubmit( options ) {
@@ -44,6 +57,8 @@ class AsyncForm {
    * данные, полученные из метода getData()
    * */
   submit() {
-
+    return {
+      data: this.getData(), 
+    }
   }
 }
