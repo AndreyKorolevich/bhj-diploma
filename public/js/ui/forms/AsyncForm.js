@@ -58,7 +58,7 @@ class AsyncForm {
    * */
   submit() {
     return {
-      data: this.getData(), 
+      data: this.getData(),
     }
   }
 }
