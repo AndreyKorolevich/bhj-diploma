@@ -36,13 +36,13 @@ class Sidebar {
     static initAuthLinks() {
         const register = document.querySelector('.menu-item_register');
         register.addEventListener('click', () => {
-            const modal = new Modal(App.getModal('#modal-register'));
+            const modal = App.getModal('register');
             modal.open();
         })
 
         const login = document.querySelector('.menu-item_login');
         login.addEventListener('click', () => {
-            const modal = new Modal(App.getModal('#modal-login'));
+            const modal = App.getModal('login');
             modal.open();
         })
 
