@@ -27,9 +27,12 @@ class Entity {
   static create( data, callback = f => f ) {
     return createRequest({
       url:this.url,
-      method: 'PUT',
+      method: 'POST',
       responseType: 'json',
-      data,
+      data: {
+        ...data,
+        _method: 'PUT'
+      },
       callback
     });
   }
