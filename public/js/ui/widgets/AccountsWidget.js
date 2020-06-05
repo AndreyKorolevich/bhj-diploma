@@ -57,11 +57,11 @@ class AccountsWidget {
     update() {
         const currentUser = User.current();
         if (currentUser) {
-            this.clear();
             Account.list(currentUser, (err, response) => {
                 if (!response.success) {
                     return
                 }
+                AccountsWidget.clear();
                 response.data.forEach(elem => this.renderItem(elem));
             })
         }
@@ -73,7 +73,7 @@ class AccountsWidget {
      * Для этого необходимо удалять все элементы .account
      * в боковой колонке
      * */
-    clear() {
+    static clear() {
         document.querySelectorAll('.account').forEach(e => e.remove());
     }
 

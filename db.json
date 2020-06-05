@@ -5,7 +5,7 @@
       "email": "demo@demo",
       "password": "demo",
       "id": "1",
-      "isAuthorized": false
+      "isAuthorized": true
     }
   ],
   "accounts": [
@@ -160,6 +160,13 @@
       "sum": 300000,
       "type": "expense",
       "user_id": "1"
+    },
+    {
+      "id": "rdcdk47okb20kzua",
+      "type": "INCOME",
+      "name": "demo",
+      "sum": 123,
+      "created_at": "2020-06-05T09:36:39.537Z"
     }
   ]
 }

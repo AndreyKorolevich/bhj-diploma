@@ -48,12 +48,12 @@ class Sidebar {
 
         const logout = document.querySelector('.menu-item_logout');
         logout.addEventListener('click', () => {
-            debugger
             const data = User.current();
             User.logout(data, (err, response) => {
                 if (!response.success) {
                     return
                 }
+                AccountsWidget.clear();
                 App.setState('init');
             })
         })
