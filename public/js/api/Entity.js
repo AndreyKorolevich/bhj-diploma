@@ -63,7 +63,8 @@ class Entity {
       responseType: 'json',
       data: {
         ...data,
-        _method: 'DELETE'
+        _method: 'DELETE',
+        id: id
       },
       callback
     });

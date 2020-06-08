@@ -27,7 +27,7 @@ class AsyncForm {
      * */
     registerEvents() {
         this.element.addEventListener('submit', event => {
-            if ( !this.element.checkValidity()) {
+            if (!this.element.checkValidity()) {
                 return;
             }
             this.submit();
@@ -43,12 +43,13 @@ class AsyncForm {
      * }
      * */
     getData() {
-        let result = {};
-        const inputs = this.element.querySelectorAll('input');
-        inputs.forEach(elem => {
-            result[elem.name] = elem.value;
-        });
-        return result
+        const arrData = [...(new FormData(this.element)).entries()];
+        return arrData.reduce((result, [key, value]) => {
+            result[key] = value;
+            return result;
+        }, {});
+
+
     }
 
     onSubmit(options) {

@@ -23,16 +23,6 @@
       "name": "Бизнес",
       "user_id": "1",
       "id": "3"
-    },
-    {
-      "name": "demo",
-      "user_id": "1",
-      "id": "rdcdk1rskb2158t4"
-    },
-    {
-      "name": "Andrey",
-      "user_id": "1",
-      "id": "rdcdk2cckb27a1fj"
     }
   ],
   "transactions": [
@@ -172,11 +162,121 @@
       "user_id": "1"
     },
     {
-      "id": "rdcdk47okb20kzua",
-      "type": "INCOME",
+      "id": "rdcdk4j0kb63k5ki",
+      "type": "EXPENSE",
       "name": "demo",
       "sum": 123,
-      "created_at": "2020-06-05T09:36:39.537Z"
+      "created_at": "2020-06-08T06:11:03.857Z"
+    },
+    {
+      "id": "rdcdk3wgkb63tlgb",
+      "type": "INCOME",
+      "name": "demo",
+      "sum": 1000,
+      "created_at": "2020-06-08T06:18:24.346Z"
+    },
+    {
+      "id": "rdcdk1m0kb63vxv0",
+      "type": "INCOME",
+      "name": "demoasd",
+      "sum": 233123,
+      "created_at": "2020-06-08T06:20:13.739Z"
+    },
+    {
+      "id": "rdcdkqskb6433bw",
+      "type": "INCOME",
+      "name": "demosdfs",
+      "sum": 1000,
+      "account_id": "1",
+      "created_at": "2020-06-08T06:25:47.419Z"
+    },
+    {
+      "id": "rdcdk46skb646l2d",
+      "type": "INCOME",
+      "name": "rock",
+      "sum": 1000,
+      "account_id": "rdcdk3o0kb6465eh",
+      "created_at": "2020-06-08T06:28:30.372Z"
+    },
+    {
+      "id": "rdcdk420kb64aov4",
+      "type": "EXPENSE",
+      "name": "col",
+      "sum": 123,
+      "account_id": "rdcdk3o0kb6465eh",
+      "created_at": "2020-06-08T06:31:41.919Z"
+    },
+    {
+      "id": "rdcdk3gckb64cizx",
+      "type": "EXPENSE",
+      "name": "demo",
+      "sum": 100,
+      "account_id": "rdcdk3o0kb6465eh",
+      "created_at": "2020-06-08T06:33:07.628Z"
+    },
+    {
+      "id": "rdcdk278kb64z5mg",
+      "type": "INCOME",
+      "name": "demovv",
+      "sum": 1000,
+      "account_id": "rdcdk3o0kb6465eh",
+      "created_at": "2020-06-08T06:50:43.383Z"
+    },
+    {
+      "id": "rdcdk5b4kb650g4c",
+      "type": "INCOME",
+      "name": "demoss",
+      "sum": 1000,
+      "account_id": "rdcdk3o0kb6465eh",
+      "created_at": "2020-06-08T06:51:43.643Z"
+    },
+    {
+      "id": "rdcdk1tckb6516ln",
+      "type": "INCOME",
+      "name": "vv",
+      "sum": 1000,
+      "account_id": "rdcdk3o0kb6465eh",
+      "created_at": "2020-06-08T06:52:17.962Z"
+    },
+    {
+      "id": "rdcdk59okb6522rw",
+      "type": "INCOME",
+      "name": "dd",
+      "sum": 1000,
+      "account_id": "rdcdk3o0kb6465eh",
+      "created_at": "2020-06-08T06:52:59.659Z"
+    },
+    {
+      "id": "rdcdk5h4kb652tnw",
+      "type": "INCOME",
+      "name": "demosdfsdf",
+      "sum": 1000,
+      "account_id": "rdcdk3o0kb6465eh",
+      "created_at": "2020-06-08T06:53:34.507Z"
+    },
+    {
+      "id": "rdcdk47ckb653fat",
+      "type": "INCOME",
+      "name": "demo",
+      "sum": 1000,
+      "account_id": "rdcdk3o0kb6465eh",
+      "created_at": "2020-06-08T06:54:02.548Z"
+    },
+    {
+      "id": "rdcdk46ckb65gnz4",
+      "type": "INCOME",
+      "name": "qwe",
+      "sum": 1000,
+      "account_id": "rdcdk3o0kb6465eh",
+      "created_at": "2020-06-08T07:04:20.319Z"
+    },
+    {
+      "id": "rdcdk4xwkb65po4r",
+      "type": "INCOME",
+      "name": "demo",
+      "sum": 1000,
+      "account_id": "rdcdk36skb65pj9w",
+      "created_at": "2020-06-08T07:11:20.426Z"
     }
   ]
 }

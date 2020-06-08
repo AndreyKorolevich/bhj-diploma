@@ -20,21 +20,19 @@ class CreateTransactionForm extends AsyncForm {
   renderAccountsList() {
     const currentUser = User.current();
     if (currentUser) {
-      Account.list(currentUser, (err, response) => {
+      Account.list(currentUser.id, (err, response) => {
         if (!response.success) {
           return
         }
+        document.querySelectorAll('.accounts-select').forEach( elem => elem.innerHTML = '');
         document.querySelectorAll('.accounts-select').forEach(elem => {
-          if (elem.options.length === 0) {
             for (let i = 0; i < response.data.length; i++) {
               let newOption = new Option(response.data[i].name, response.data[i].id);
               elem.append(newOption);
-            }
           }
         })
       })
     }
-
   }
 
   /**
