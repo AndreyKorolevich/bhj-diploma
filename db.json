@@ -183,14 +183,6 @@
       "created_at": "2020-06-08T06:20:13.739Z"
     },
     {
-      "id": "rdcdkqskb6433bw",
-      "type": "INCOME",
-      "name": "demosdfs",
-      "sum": 1000,
-      "account_id": "1",
-      "created_at": "2020-06-08T06:25:47.419Z"
-    },
-    {
       "id": "rdcdk46skb646l2d",
       "type": "INCOME",
       "name": "rock",

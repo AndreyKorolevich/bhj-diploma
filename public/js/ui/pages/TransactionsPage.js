@@ -177,7 +177,7 @@ class TransactionsPage {
     <div class="col-md-3">
       <div class="transaction__summ">
       ${item.sum} 
-      <span class="currency">₽</span>
+      <span class="currency black-rub">P</span>
       </div>
     </div>
     <div class="col-md-2 transaction__controls">

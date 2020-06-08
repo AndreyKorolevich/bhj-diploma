@@ -100,18 +100,24 @@ class AccountsWidget {
     getAccountHTML(item) {
         const li = document.createElement('li');
         const a = document.createElement('a');
-        const span1 = document.createElement('span1');
-        const span2 = document.createElement('span2');
+        const span1 = document.createElement('span');
+        const span2 = document.createElement('span');
+        const rub = document.createElement('span');
 
         li.className = 'account';
+        rub.className = 'rub';
         li.dataset.id = item.id;
         a.href = '#';
         span1.textContent = item.name;
         span2.textContent = item.sum;
+        rub.textContent = 'P';
 
         li.insertAdjacentElement('afterbegin', a);
         a.insertAdjacentElement('afterbegin', span1);
+        a.insertAdjacentHTML('beforeend', ' / ');
         a.insertAdjacentElement('beforeend', span2);
+        a.insertAdjacentElement('beforeend', rub);
+
 
         return li
     }

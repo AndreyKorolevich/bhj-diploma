@@ -79,3 +79,17 @@
 .transaction__controls {
   line-height: 70px;
 }
+
+.rub {
+  line-height: 5px;
+  width: 0.4em;
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+}
+
+.black-rub {
+  line-height: 5px;
+  width: 0.4em;
+  border-bottom: 1px solid #000;
+  display: inline-block;
+}
